@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h2>Cupcakes for Sale!</h2>
+    {% for cupcake in cupcakes %}
+    <div class="cupcake">
+        <a href="{{ url_for('individual_cupcake', name=cupcake['name']) }}">
+            <h3>{{ cupcake["name"] }}</h3>
+        </a>
+        <h4>Flavor: {{ cupcake["flavor"] }}</h4>
+        <h4>Frosting: {{ cupcake["frosting"] }}</h4>
+        <h4><b>Price: ${{ cupcake["price"] }}</b></h4>
+        <a href="{{ url_for('order_cupcake', name=cupcake['name']) }}">
+            <button>Add to Cart</button>
+        </a>
+        <hr>
+    </div>
+    {% endfor %}
+{% endblock %}

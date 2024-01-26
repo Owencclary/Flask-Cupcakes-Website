@@ -1,0 +1,10 @@
+TO DO
+----------------------------------------------------------------
+
+- fix ordering cupcakes
+
+
+DONE
+----------------------------------------------------------------
+
+- make sure the list of cupcakes is passed in corrct and displays the correct indexes
